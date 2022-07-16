@@ -1,0 +1,382 @@
+body {
+  background-color: hsl(222, 26%, 31%);
+  font-family: "League Spartan", sans-serif;
+}
+
+.attribution{width: 100%;
+           text-align: center;
+           color:white}
+
+.attribution a{color:white}
+
+header {
+  width: 100%;
+  padding: 5px;
+  box-sizing: border-box;
+  height: 70px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: white;
+}
+
+h1 {
+  margin-top: 24px;
+  height: 10px;
+}
+
+.container-main {
+  width: 90%;
+  height: 750px;
+  margin: 50px auto;
+  display: flex;
+  flex-direction: column;
+}
+
+.switch {
+  width: 70px;
+  margin: 0px auto;
+  height: 25px;
+  background-color: hsl(223, 31%, 20%);
+  border-radius: 45px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.switch::before {
+  content: "THEME";
+  display: block;
+  padding: 5px;
+  font-size: 13px;
+  box-sizing: border-box;
+  font-weight: bold;
+  position: absolute;
+  margin-right: 150px;
+  height: 20px;
+  width: 60px;
+}
+
+.switch input {
+  appearance: none;
+  width: 15px;
+  height: 15px;
+  border-radius: 100%;
+  opacity: 0;
+  background-color: hsl(25, 98%, 40%);
+  transition: 0.2s ease;
+}
+
+.switch input:hover {
+  cursor: pointer;
+}
+
+.switch .selected {
+  opacity: 1;
+}
+
+.comp-swtich {
+  width: 70px;
+  height: 35px;
+}
+
+.numbers {
+  display: flex;
+  width: 70px;
+
+  height: 17px;
+
+  justify-content: space-around;
+}
+
+.numbers span {
+  font-size: 12px;
+  font-weight: bold;
+}
+
+.output {
+  width: 100%;
+  padding: 36px;
+  height:90px;
+  margin-top: 35px;
+  display: flex;
+  align-items: center;
+  justify-content: right;
+  border-radius: 7px;
+  box-sizing: border-box;
+  background-color: hsl(224, 36%, 15%);
+  color: white;
+  overflow: hidden;
+  font-size: 36px;
+}
+
+.cont-btns {
+  width: 100%;
+  margin-top: 25px;
+  padding-top: 28px;
+  padding-left:8px; 
+  padding-right:8px;
+  padding-bottom: 28px;
+  color: #444b5a;
+
+  border-radius: 7px;
+
+  box-sizing: border-box;
+  background-color: hsl(223, 31%, 20%);
+  height: auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  flex-direction: column;
+}
+
+.del {
+  color: white;
+  background-color: #637097;
+  box-shadow: rgb(64, 78, 114) 0px 5px 0px 0px;
+  text-transform: uppercase;
+  font-size: 23px;
+}
+
+.reset {
+  color: white;
+  background-color: #637097;
+  box-shadow: rgb(64, 78, 114) 0px 5px 0px 0px;
+  text-transform: uppercase;
+  font-size: 23px;
+}
+
+.igual {
+  background-color: #d03f2f;
+  color: white;
+  box-shadow: rgb(147, 38, 26) 0px 5px 0px 0px;
+}
+
+.c-1 {
+  width: 95%;
+  padding: 0px;
+  height: auto;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 16px;
+}
+
+.c-2 {
+  padding: 0px;
+  width:95%;
+  box-sizing: border-box;
+  height: auto;
+  display: flex;
+  justify-content: space-around;
+}
+
+.c-2 button {
+  width: 45%;
+}
+
+button {
+  font-size: 32px;
+  font-weight: bold;
+  width: 20%;
+  height: 60px;
+  border: none;
+  border-radius: 7px;
+  background-color: #eae3dc;
+  box-shadow: rgb(180, 165, 151) 0px 5px 0px 0px;
+  cursor: pointer;
+}
+
+
+
+
+
+
+
+
+
+@media (min-width: 1280px) {
+
+
+ .attribution{width: 100%;
+           text-align: center;
+           color:white}
+
+.attribution a{color:white}
+
+header {
+  width: 100%;
+  padding: 5px;
+  box-sizing: border-box;
+  height: 70px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: white;
+}
+
+h1 {
+  margin-top: 24px;
+  height: 10px;
+}
+
+.container-main {
+  width: 35%;
+  height: 750px;
+  margin: 50px auto;
+  display: flex;
+  flex-direction: column;
+}
+
+.switch {
+  width: 70px;
+  margin: 0px auto;
+  height: 25px;
+  background-color: hsl(223, 31%, 20%);
+  border-radius: 45px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.switch::before {
+  content: "THEME";
+  display: block;
+  padding: 5px;
+  font-size: 13px;
+  box-sizing: border-box;
+  font-weight: bold;
+  position: absolute;
+  margin-right: 150px;
+  height: 20px;
+  width: 60px;
+}
+
+.switch input {
+  appearance: none;
+  width: 15px;
+  height: 15px;
+  border-radius: 100%;
+  opacity: 0;
+  background-color: hsl(25, 98%, 40%);
+  transition: 0.2s ease;
+}
+
+.switch input:hover {
+  cursor: pointer;
+}
+
+.switch .selected {
+  opacity: 1;
+}
+
+.comp-swtich {
+  width: 70px;
+  height: 35px;
+}
+
+.numbers {
+  display: flex;
+  width: 70px;
+
+  height: 17px;
+
+  justify-content: space-around;
+}
+
+.numbers span {
+  font-size: 12px;
+  font-weight: bold;
+}
+
+.output {
+  width: 100%;
+  padding: 36px;
+  height: 120px;
+  margin-top: 35px;
+  display: flex;
+  align-items: center;
+  justify-content: right;
+  border-radius: 7px;
+  box-sizing: border-box;
+  background-color: hsl(224, 36%, 15%);
+  color: white;
+  overflow: hidden;
+  font-size: 36px;
+}
+
+.cont-btns {
+  width: 100%;
+  margin-top: 25px;
+  padding-top: 28px;
+  padding-bottom: 28px;
+  color: #444b5a;
+
+  border-radius: 7px;
+
+  box-sizing: border-box;
+  background-color: hsl(223, 31%, 20%);
+  height: auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  flex-direction: column;
+}
+
+.del {
+  color: white;
+  background-color: #637097;
+  box-shadow: rgb(64, 78, 114) 0px 5px 0px 0px;
+  text-transform: uppercase;
+  font-size: 23px;
+}
+
+.reset {
+  color: white;
+  background-color: #637097;
+  box-shadow: rgb(64, 78, 114) 0px 5px 0px 0px;
+  text-transform: uppercase;
+  font-size: 23px;
+}
+
+.igual {
+  background-color: #d03f2f;
+  color: white;
+  box-shadow: rgb(147, 38, 26) 0px 5px 0px 0px;
+}
+
+.c-1 {
+  width: 95%;
+  padding: 0px;
+  height: auto;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 16px;
+}
+
+.c-2 {
+  padding: 0px;
+  width:95%;
+  box-sizing: border-box;
+  height: auto;
+  display: flex;
+  justify-content: space-around;
+}
+
+.c-2 button {
+  width: 45%;
+}
+
+button {
+  font-size: 32px;
+  font-weight: bold;
+  width: 20%;
+  height: 60px;
+  border: none;
+  background-color: #eae3dc;
+  box-shadow: rgb(180, 165, 151) 0px 5px 0px 0px;
+}
+
+  
+}

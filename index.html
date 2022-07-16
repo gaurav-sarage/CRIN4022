@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@400;700&display=swap" rel="stylesheet" />
+  <link rel="icon" type="image/png" sizes="32x32" href="./favicon-32x32.png" />
+  <link rel="stylesheet" href="./style.css" />
+  <title>Calculator app</title>
+</head>
+
+<body>
+  <div class="container-main">
+    <header>
+      <h1>calc</h1>
+      <div class="comp-swtich">
+        <div class="numbers">
+          <span>1</span>
+          <span>2</span>
+          <span>3</span>
+        </div>
+        <div class="switch">
+          <input type="checkbox" name="theme" value="theme1" class="selected" />
+          <input type="checkbox" name="theme" value="theme2" />
+          <input type="checkbox" name="theme" value="theme3" />
+        </div>
+      </div>
+    </header>
+
+    <div class="output"></div>
+
+    <div class="cont-btns">
+      <div class="c-1">
+        <button class="bt-s d">7</button>
+        <button class="bt-s">8</button>
+        <button class="bt-s">9</button>
+        <button class="del">del</button>
+      </div>
+      <div class="c-1">
+        <button class="bt-s">4</button>
+        <button class="bt-s">5</button>
+        <button class="bt-s">6</button>
+        <button class="bt-s">+</button>
+      </div>
+      <div class="c-1">
+        <button class="bt-s">1</button>
+        <button class="bt-s">2</button>
+        <button class="bt-s">3</button>
+        <button class="bt-s">-</button>
+      </div>
+      <div class="c-1">
+        <button class="bt-s">.</button>
+        <button class="bt-s">0</button>
+        <button class="bt-s">/</button>
+        <button class="bt-s">*</button>
+      </div>
+      <div class="c-2">
+        <button class="reset">reset</button>
+        <button class="igual">=</button>
+      </div>
+    </div>
+  </div>
+  <script src="./calc.js"></script>
+
+  <script>
+    let swtich = document.querySelector(".switch");
+    let body = document.querySelector("body");
+    let output = document.querySelector(".output");
+    let header = document.querySelector("header");
+    let contBtns = document.querySelector(".cont-btns");
+    let btnDel = document.querySelector(".del");
+    let input = document.querySelectorAll("input");
+    let btnReset = document.querySelector(".reset");
+    let btnIgual = document.querySelector(".igual");
+    let btns = document.querySelectorAll(".bt-s");
+    let footer = document.querySelector("footer");
+    let a = document.querySelector("footer a");
+    let a2 = document.querySelector("footer .a2");
+
+
+    [...input].forEach((e, i) => {
+      e.addEventListener("click", () => {
+        if (i === 0) {
+          e.classList.add("selected");
+
+          input[1].classList.remove("selected");
+          input[2].classList.remove("selected");
+
+          body.style.backgroundColor = "hsl(222, 26%, 31%)";
+          output.style.backgroundColor = "hsl(224, 36%, 15%)";
+          output.style.color = "white";
+          header.style.color = "white";
+          swtich.style.backgroundColor = " hsl(223, 31%, 20%)";
+          contBtns.style.backgroundColor = "hsl(223, 31%, 20%)";
+          btnDel.style.backgroundColor = "#637097";
+          btnDel.style.color = "white";
+          btnDel.style.boxShadow = "rgb(64, 78, 114) 0px 5px 0px 0px";
+          btnReset.style.backgroundColor = "#637097";
+          btnReset.style.boxShadow = "rgb(64, 78, 114) 0px 5px 0px 0px";
+          btnReset.style.color = "white";
+          btnIgual.style.backgroundColor = "#d03f2f";
+          btnIgual.style.color = "white";
+          btnIgual.style.boxShadow = "rgb(147, 38, 26) 0px 5px 0px 0px";
+          footer.style.color = "white";
+          a.style.color = "white";
+          a2.style.color = "white";
+
+          [...btns].forEach((e) => {
+            e.style.color = "#444b5a";
+            e.style.backgroundColor = "#eae3dc";
+            e.style.boxShadow = "rgb(180, 165, 151) 0px 5px 0px 0px";
+
+          });
+        } else if (i === 1) {
+          e.classList.add("selected");
+          input[0].classList.remove("selected");
+          input[2].classList.remove("selected");
+
+          body.style.backgroundColor = "#e6e6e6";
+          header.style.color = "black";
+          output.style.backgroundColor = "#ededed";
+          output.style.color = "black";
+
+          swtich.style.backgroundColor = "#d1cccc";
+          contBtns.style.backgroundColor = "#d1cccc";
+          btnDel.style.backgroundColor = "#377f86";
+          btnDel.style.boxShadow = "rgb(27, 95, 101) 0px 5px 0px 0px";
+          btnDel.style.color = "#35352c";
+          btnReset.style.backgroundColor = "#377f86";
+          btnReset.style.boxShadow = "rgb(27, 95, 101) 0px 5px 0px 0px";
+          btnReset.style.color = "#35352c";
+          btnIgual.style.backgroundColor = "#ca5502";
+          btnIgual.style.boxShadow = "rgb(137, 57, 1) 0px 5px 0px 0px";
+          footer.style.color = "black";
+          a.style.color = "black";
+          a2.style.color = "black";
+
+          [...btns].forEach((e) => {
+            e.style.color = "#444b5a";
+            e.style.backgroundColor = "#eae3dc";
+            e.style.boxShadow = "rgb(180, 165, 151) 0px 5px 0px 0px";
+          });
+        } else {
+          e.classList.add("selected");
+          input[1].classList.remove("selected");
+          input[0].classList.remove("selected");
+
+          body.style.backgroundColor = "#160628";
+          header.style.color = "#ffe53d";
+          output.style.backgroundColor = "#1d0934";
+          output.style.color = "#ffe53d";
+
+          swtich.style.backgroundColor = "#1d0934";
+          contBtns.style.backgroundColor = "#1d0934";
+
+          [...btns].forEach((e) => {
+            e.style.color = "#ffe53d";
+            e.style.backgroundColor = "#341c4f";
+            e.style.boxShadow = "rgb(135, 28, 156) 0px 5px 0px 0px";
+          });
+          btnDel.style.backgroundColor = "#58077d";
+          btnDel.style.boxShadow = "rgb(188, 21, 244) 0px 5px 0px 0px";
+
+          btnDel.style.color = "#ffe53d";
+          btnReset.style.backgroundColor = "#58077d";
+          btnReset.style.boxShadow = "rgb(188, 21, 244) 0px 5px 0px 0px";
+          btnReset.style.color = "#ffe53d";
+          btnIgual.style.backgroundColor = "#00e0d1";
+          btnIgual.style.boxShadow = "rgb(108, 249, 242) 0px 5px 0px 0px";
+          btnIgual.style.color = "#1b2428";
+          footer.style.color = "#ffe53d";
+          a.style.color = "#ffe53d";
+          a2.style.color = "#ffe53d";
+        }
+      });
+    });
+  </script>
+</body>
+
+</html>
